@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-#2hnfd)n%so+i%!@3ta5bs^xg6$agim7+=#pe^myov-9iox4+s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -78,8 +78,12 @@ WSGI_APPLICATION = 'intourist.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'intourist_db',
+        'USER': 'postgres',
+        'PASSWORD': '11111',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
